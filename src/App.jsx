@@ -1409,7 +1409,8 @@ useEffect(() => {
 
       const response = await getQuestions();
 
-      const formattedQuestions = response.data.map(formatQuestionResponse);
+     const formattedQuestions =
+       response.data.content.map(formatQuestionResponse);
 
       setQuestions(formattedQuestions);
     } catch (error) {
